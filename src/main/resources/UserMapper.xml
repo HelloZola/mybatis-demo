@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.mybatis.vo.User">
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="AGE" jdbcType="INTEGER" property="age"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.mybatis.vo.User">
+        insert into t_user_test(`name`,age)values(#{name},#{age})
+    </insert>
+
+</mapper>
