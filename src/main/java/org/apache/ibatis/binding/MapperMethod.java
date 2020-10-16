@@ -46,6 +46,8 @@ public class MapperMethod {
   }
 
   public Object execute(SqlSession sqlSession, Object[] args) {
+
+    System.out.println(sqlSession.getClass());
     Object result;
     if (SqlCommandType.INSERT == command.getType()) {
       Object param = method.convertArgsToSqlCommandParam(args);
